@@ -31,8 +31,8 @@ jobs:
             runner: windows-latest
           - architecture: ARM64
             qt_arch: win64_msvc2022_arm64
-            msvc: MSVC2022
-            runner: windows-11-arm
+            msvc: MSVC2026
+            runner: windows-11-vs2026-arm
       fail-fast: false
     name: Windows (${{ matrix.architecture }})
     runs-on: ${{ matrix.runner }}
@@ -68,7 +68,7 @@ jobs:
           msbuild-architecture: ${{ runner.arch == 'ARM64' && 'arm64' || 'x64' }}
       - name: Build dependencies
         run: |
-          msbuild -t:MediaInfoLib -p:Configuration=Release -p:Platform=${{ matrix.architecture }} -clp:ForceConsoleColor ${{ github.workspace }}\MediaInfoLib\Project\${{ matrix.msvc }}\MediaInfoLib.${{ matrix.msvc == 'MSVC2026' && 'slnx' || 'sln' }}
+          msbuild -t:MediaInfoLib -p:Configuration=Release -p:Platform=${{ matrix.architecture }} -clp:ForceConsoleColor ${{ github.workspace }}\MediaInfoLib\Project\${{ matrix.msvc }}\MediaInfoLib.${{ matrix.msvc == 'MSVC2022' && 'sln' || 'slnx' }}
       - name: Setup MSVC Environment
         uses: ./MediaInfo/.github/actions/setup-msvc
       - name: Build
@@ -82,9 +82,9 @@ jobs:
       matrix:
         include:
           - architecture: AMD64
-            runner: ubuntu-latest
+            runner: ubuntu-26.04
           - architecture: ARM64
-            runner: ubuntu-24.04-arm
+            runner: ubuntu-26.04-arm
       fail-fast: false
     name: Ubuntu (${{ matrix.architecture }})
     runs-on: ${{ matrix.runner }}
