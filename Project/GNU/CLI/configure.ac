@@ -37,24 +37,24 @@ dnl #########################################################################
 dnl -------------------------------------------------------------------------
 dnl Arguments - Enable
 dnl
-AC_ARG_ENABLE(debug,            AC_HELP_STRING([--enable-debug],            [Enable full debug]),                         , enable_debug=no)
-AC_ARG_ENABLE(gprof,            AC_HELP_STRING([--enable-gprof],            [Enable gprof log]),                          , enable_gprof=no)
-AC_ARG_ENABLE(universal_binary, AC_HELP_STRING([--enable-universal_binary], [Create Mac PPC/i386 Universal binary]),      , enable_universal_binary=no)
-AC_ARG_ENABLE(arch-ppc,         AC_HELP_STRING([--enable-arch-ppc],         [Create Mac PPC architecture]),               , enable_arch_ppc=no)
-AC_ARG_ENABLE(arch-ppc64,       AC_HELP_STRING([--enable-arch-ppc64],       [Create Mac PPC64 architecture]),             , enable_arch_ppc64=no)
-AC_ARG_ENABLE(arch-i386,        AC_HELP_STRING([--enable-arch-i386],        [Create Mac i386 architecture]),              , enable_arch_i386=no)
-AC_ARG_ENABLE(arch-x86_64,      AC_HELP_STRING([--enable-arch-x86_64],      [Create Mac x86_64 architecture]),            , enable_arch_x86_64=no)
-AC_ARG_ENABLE(arch-arm64,       AC_HELP_STRING([--enable-arch-arm64],       [Create Mac arm64 architecture]),             , enable_arch_arm64=no)
-AC_ARG_ENABLE(staticlibs,       AC_HELP_STRING([--enable-staticlibs],       [Use static libmediainfo and libzen]),        , enable_staticlibs=no)
-AC_ARG_ENABLE([stream_missing],    [AS_HELP_STRING(([--enable-stream_missing],    [Disable stream support (old compilers)]))],    , [enable_stream_missing=no])
+AC_ARG_ENABLE(debug,            AS_HELP_STRING([--enable-debug],            [Enable full debug]),                           , enable_debug=no)
+AC_ARG_ENABLE(gprof,            AS_HELP_STRING([--enable-gprof],            [Enable gprof log]),                            , enable_gprof=no)
+AC_ARG_ENABLE(universal_binary, AS_HELP_STRING([--enable-universal_binary], [Create Mac PPC/i386 Universal binary]),        , enable_universal_binary=no)
+AC_ARG_ENABLE(arch-ppc,         AS_HELP_STRING([--enable-arch-ppc],         [Create Mac PPC architecture]),                 , enable_arch_ppc=no)
+AC_ARG_ENABLE(arch-ppc64,       AS_HELP_STRING([--enable-arch-ppc64],       [Create Mac PPC64 architecture]),               , enable_arch_ppc64=no)
+AC_ARG_ENABLE(arch-i386,        AS_HELP_STRING([--enable-arch-i386],        [Create Mac i386 architecture]),                , enable_arch_i386=no)
+AC_ARG_ENABLE(arch-x86_64,      AS_HELP_STRING([--enable-arch-x86_64],      [Create Mac x86_64 architecture]),              , enable_arch_x86_64=no)
+AC_ARG_ENABLE(arch-arm64,       AS_HELP_STRING([--enable-arch-arm64],       [Create Mac arm64 architecture]),               , enable_arch_arm64=no)
+AC_ARG_ENABLE(staticlibs,       AS_HELP_STRING([--enable-staticlibs],       [Use static libmediainfo and libzen]),          , enable_staticlibs=no)
+AC_ARG_ENABLE([stream_missing], [AS_HELP_STRING(([--enable-stream_missing], [Disable stream support (old compilers)]))],    , [enable_stream_missing=no])
 
 dnl -------------------------------------------------------------------------
 dnl Arguments - With
 dnl
-AC_ARG_WITH(macosx-sdk,         AC_HELP_STRING([--with-macosx-sdk],         [Force the Mac SDK]),                         , with_macosx_sdk=no)
-AC_ARG_WITH(macosx-version-min, AC_HELP_STRING([--with-macosx-version-min], [Force the Mac Version]),                     , with_macosx_version_min=no)
-AC_ARG_WITH(dll,            AC_HELP_STRING([--with-dll],            [Do not link to libmediainfo, dynamic loading]), , with_dll=no)
-AC_ARG_WITH(libmediainfo-name,  AC_HELP_STRING([--with-libmediainfo-name],  [Force libmediainfo filename]),                  		  , with_libmediainfo_name=mediainfo)
+AC_ARG_WITH(macosx-sdk,         AS_HELP_STRING([--with-macosx-sdk],         [Force the Mac SDK]),                           , with_macosx_sdk=no)
+AC_ARG_WITH(macosx-version-min, AS_HELP_STRING([--with-macosx-version-min], [Force the Mac Version]),                       , with_macosx_version_min=no)
+AC_ARG_WITH(dll,                AS_HELP_STRING([--with-dll],                [Do not link to libmediainfo, dynamic loading]), , with_dll=no)
+AC_ARG_WITH(libmediainfo-name,  AS_HELP_STRING([--with-libmediainfo-name],  [Force libmediainfo filename]),                 , with_libmediainfo_name=mediainfo)
 
 dnl -------------------------------------------------------------------------
 dnl External options
